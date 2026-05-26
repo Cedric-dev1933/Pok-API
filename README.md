@@ -19,7 +19,7 @@ Esse projeto foi feito como introdução ao consumo de APIs REST em Python.
 Clone o repositório:
 
 ```bash
-git clone (https://github.com/Cedric-dev1933/Pok-API)
+git clone https://github.com/Cedric-dev1933/Pok-API
 ```
 
 Entre na pasta do projeto:
