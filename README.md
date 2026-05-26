@@ -25,7 +25,7 @@ git clone https://github.com/Cedric-dev1933/Pok-API
 Entre na pasta do projeto:
 
 ```bash
-cd 
+cd Pok-API
 ```
 
 Instale a biblioteca requests:
