@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <input type="text" name="pokemon_name" placeholder="Digite um nome">
+        <button type="submit">Pesquisar</button>
+    </form>
+    
+    {% if error %}
+    {{error}}
+    {% endif %}
+    
+    {% if pokemon %}
+    <h2>{{pokemon.name}}</h2>
+    <p>ID: {{pokemon.id}}</p>
+    <p>Altura: {{pokemon.height}} Metros</p>
+    <p>Peso: {{pokemon.weight}} KG</p>
+
+    <h3>Tipos</h3>
+    <ul>
+        {% for type in pokemon.types %}
+        <li>{{type}}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Habilidades</h3>
+    <ul>
+        {% for ability in pokemon.abilities %}
+        <li>
+            {{ability.name}}
+            {% if ability.hidden %} (Hidden Ability) {% endif %}
+        </li>
+        
+        {% endfor %}
+    </ul>
+
+    <h3>Sprite</h3>
+   <img src="{{pokemon.sprite}}" alt="{{pokemon.name}}">
+
+
+    {% endif %}
+
+
+</body>
+</html>
