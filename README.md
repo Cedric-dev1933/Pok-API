@@ -1,63 +1,29 @@
-# Pok-API
-Projeto simples em Python consumindo a PokéAPI usando a biblioteca `requests`.
+# Pokédex com Flask e PokéAPI
 
-O programa permite pesquisar um Pokémon pelo nome e exibe:
-- ID
-- Nome
-- Altura
-- Peso
-
-Esse projeto foi feito como introdução ao consumo de APIs REST em Python.
+Projeto web simples de uma Pokédex, desenvolvido em Python com Flask. O usuário digita o nome de um Pokémon em uma barra de busca e recebe informações como ID, altura, peso, tipos, habilidades e sprite frontal do Pokémon pesquisado.
 
 ## Tecnologias utilizadas
-- Python 3
-- Requests
-- PokéAPI
 
-## Como executar
+O projeto utiliza **Python** como linguagem principal, **Flask** como framework web para lidar com as rotas e renderização de templates, e a biblioteca **Requests** para realizar as chamadas HTTP à [PokéAPI](https://pokeapi.co/), uma API pública e gratuita com dados de todos os Pokémon. O front-end é feito com HTML puro, usando o sistema de templates **Jinja2** (integrado ao Flask) para exibir os dados dinamicamente na página.
 
-Clone o repositório:
+## O que foi aprendido
 
-```bash
-git clone https://github.com/Cedric-dev1933/Pok-API
-```
+Esse projeto foi desenvolvido como primeiro contato com consumo de APIs e desenvolvimento web com Python. Durante o processo, foram trabalhados os seguintes conceitos:
 
-Entre na pasta do projeto:
+Como fazer requisições HTTP com a biblioteca Requests e interpretar o código de status da resposta. Como navegar pela estrutura de um JSON retornado por uma API, identificando dicionários aninhados e listas de objetos. Como usar o Flask para criar rotas que aceitam os métodos GET e POST, e como distinguir os dois dentro da mesma função. Como ler dados enviados por um formulário HTML usando `request.form`. Como processar e "limpar" os dados brutos da API antes de enviá-los ao template, montando dicionários customizados com apenas as informações relevantes. Como usar o Jinja2 para exibir dados dinâmicos no HTML, incluindo condicionais com `{% if %}` e laços com `{% for %}`.
 
-```bash
-cd Pok-API
-```
+## Como rodar localmente
 
-Instale a biblioteca requests:
+Certifique-se de ter o Python instalado. Clone o repositório e, dentro da pasta do projeto, instale as dependências:
 
 ```bash
-pip install requests
+pip install flask requests
 ```
 
-Execute o programa:
+Em seguida, execute o servidor:
 
 ```bash
-python main.py
+python Flask.py
 ```
 
-## Exemplo de uso
-
-```text
-Digite o nome do Pokémon: pikachu
-
-ID do Pokémon: 25
-Nome do Pokémon: Pikachu
-Altura do Pikachu: 0.4 metros
-Peso do Pikachu: 6.0 KG
-```
-
-## O que pratiquei neste projeto
-
-- Requisições HTTP com `requests`
-- Consumo de API REST
-- Conversão de JSON para dicionário Python
-- Loops e funções em Python
-
-## API utilizada
-
-https://pokeapi.co/
+Abra o navegador e acesse `http://127.0.0.1:5000`. Digite o nome de qualquer Pokémon na barra de busca e clique em Pesquisar.
