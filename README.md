@@ -26,4 +26,4 @@ Em seguida, execute o servidor:
 python Flask.py
 ```
 
-Abra o navegador e acesse `http://127.0.0.1:5000`. Digite o nome de qualquer Pokémon na barra de busca e clique em Pesquisar.
+Abra o navegador e acesse `localhost:5000`. Digite o nome de qualquer Pokémon na barra de busca e clique em Pesquisar.
